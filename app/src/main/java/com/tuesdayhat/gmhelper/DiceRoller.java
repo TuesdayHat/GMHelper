@@ -15,5 +15,13 @@ public abstract class DiceRoller {
         return results;
     }
 
-    
+    public int total (int[] dice, int bonus) {
+        int result = 0;
+        for (int i=0; i<dice.length;i++){
+            result += dice[i];
+        }
+        return result + bonus;
+    }
+
+
 }
