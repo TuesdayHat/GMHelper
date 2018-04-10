@@ -26,4 +26,12 @@ public class DiceRollerTest extends DiceRoller {
         System.out.println(result);
         assert(result >= 2 && result <= 12);
     }
+
+    @Test
+    public void DiceRoller_countSuccesses_TakeInRawDiceRollsAndListsHowManyAreAboveInput() throws Exception{
+        int[] rolls = dice(15, 6);
+
+        System.out.println(countSuccesses(rolls, 4));
+        assert(2 < countSuccesses(rolls, 4));
+    }
 }

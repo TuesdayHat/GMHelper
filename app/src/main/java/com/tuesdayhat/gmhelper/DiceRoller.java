@@ -23,5 +23,15 @@ public abstract class DiceRoller {
         return result + bonus;
     }
 
+    public int countSuccesses (int[] dice, int limit){
+        int result = 0;
+        for (int i = 0; i<dice.length; i++){
+            if (dice[i] >= limit){
+                result++;
+            }
+        }
+        return result;
+    }
+
 
 }
