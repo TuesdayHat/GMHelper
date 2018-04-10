@@ -33,5 +33,22 @@ public abstract class DiceRoller {
         return result;
     }
 
+    public int[] keep(String type, int limit, int[] dice){ //will likely get refactored to handle all text parsing
+        int[] result = new int[limit];
+
+        switch(type){
+            case "k":
+                for(int i =0;i<dice.length;i++){
+                }
+                break;
+
+            case "kl":
+                for(int i =0;i<dice.length;i++){
+                }
+                break;
+        }
+
+        return result;
+    }
 
 }

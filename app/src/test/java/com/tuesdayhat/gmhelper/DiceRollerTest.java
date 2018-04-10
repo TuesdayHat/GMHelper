@@ -34,4 +34,18 @@ public class DiceRollerTest extends DiceRoller {
         System.out.println(countSuccesses(rolls, 4));
         assert(2 < countSuccesses(rolls, 4));
     }
+
+    @Test
+    public void DiceRoller_keep_keepsHighestOrLowestXDice() throws Exception{
+        int[] rolls = {6, 4, 2, 1, 5, 8, 3, 10, 9, 7, 2, 1, 6, 6, 8, 3, 2};
+        int[] keepHigh = keep("k", 4, rolls);
+        int[] keepLow = keep("kl", 3, rolls);
+
+        int[] expHigh = {10, 9, 8,8};
+        int[] expLow = {1, 1, 2};
+
+        assertEquals(expHigh, keepHigh);
+        assertEquals(expLow, keepLow);
+
+    }
 }
