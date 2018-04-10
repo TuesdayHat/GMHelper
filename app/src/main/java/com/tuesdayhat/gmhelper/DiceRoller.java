@@ -34,7 +34,7 @@ public abstract class DiceRoller {
         return result;
     }
 
-    public int[] parse(String type, int limit, int[] dice){ //will likely get refactored to handle all text parsing
+    public int[] keep(String type, int limit, int[] dice){ //will likely get refactored to handle all text parsing
         int[] result = new int[limit];
         int[] nums = dice;
 

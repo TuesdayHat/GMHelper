@@ -36,10 +36,10 @@ public class DiceRollerTest extends DiceRoller {
     }
 
     @Test
-    public void DiceRoller_parse_keepsHighestOrLowestXDice() throws Exception{
+    public void DiceRoller_keep_keepsHighestOrLowestXDice() throws Exception{
         int[] rolls = {6, 4, 2, 1, 5, 8, 3, 10, 9, 7, 2, 1, 6, 6, 8, 3, 2};
-        int[] keepHigh = parse("k", 4, rolls);
-        int[] keepLow = parse("kl", 3, rolls);
+        int[] keepHigh = keep("k", 4, rolls);
+        int[] keepLow = keep("kl", 3, rolls);
 
         int[] expHigh = {8, 8, 9, 10};
         int[] expLow = {1, 1, 2};
