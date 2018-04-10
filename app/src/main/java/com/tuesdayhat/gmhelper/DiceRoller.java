@@ -1,6 +1,7 @@
 package com.tuesdayhat.gmhelper;
 
 
+import java.util.Arrays;
 import java.util.Random;
 
 public abstract class DiceRoller {
@@ -33,18 +34,19 @@ public abstract class DiceRoller {
         return result;
     }
 
-    public int[] keep(String type, int limit, int[] dice){ //will likely get refactored to handle all text parsing
+    public int[] parse(String type, int limit, int[] dice){ //will likely get refactored to handle all text parsing
         int[] result = new int[limit];
+        int[] nums = dice;
 
         switch(type){
             case "k":
-                for(int i =0;i<dice.length;i++){
-                }
+                Arrays.sort(nums);
+                result = Arrays.copyOfRange(nums, nums.length-limit, nums.length);
                 break;
 
             case "kl":
-                for(int i =0;i<dice.length;i++){
-                }
+                Arrays.sort(nums);
+                result = Arrays.copyOfRange(nums, 0, limit);
                 break;
         }
 
