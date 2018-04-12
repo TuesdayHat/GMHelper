@@ -4,7 +4,7 @@ package com.tuesdayhat.gmhelper;
 import java.util.Arrays;
 import java.util.Random;
 
-public abstract class DiceRoller {
+public class DiceRoller {
 
     //gives back an array of all natural results of dice rolls
     public int[] dice (int rolls, int sides){
