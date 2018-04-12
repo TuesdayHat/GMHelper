@@ -24,7 +24,8 @@
         android:layout_marginTop="75dp"
         android:layout_toStartOf="@+id/dMarker"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:hint="rolls"/>
 
     <EditText
         android:id="@+id/diceSizeInput"
@@ -35,7 +36,8 @@
         android:layout_marginStart="22dp"
         android:layout_toEndOf="@+id/dMarker"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:hint="sides"/>
 
     <TextView
         android:id="@+id/dMarker"
@@ -73,6 +75,17 @@
         android:layout_below="@+id/totalResultView"
         android:layout_centerHorizontal="true"
         android:text="ROLL!" />
+
+    <EditText
+        android:id="@+id/bonusInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rollInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="bonus"
+        android:inputType="numberSigned" />
 
 
 </RelativeLayout>
