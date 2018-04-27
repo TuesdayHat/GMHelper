@@ -38,7 +38,7 @@
         android:layout_toEndOf="@+id/dMarker"
         android:ems="10"
         android:inputType="number"
-        android:hint="sides"
+        android:hint="table"
         android:textSize="22dp"/>
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_alignBaseline="@+id/rollInput"
         android:layout_alignBottom="@+id/rollInput"
         android:layout_centerHorizontal="true"
-        android:text="D"
+        android:text="|"
         android:textSize="30dp"/>
 
     <TextView
@@ -80,16 +80,16 @@
         android:layout_centerHorizontal="true"
         android:text="ROLL!" />
 
-    <EditText
-        android:id="@+id/bonusInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rollInput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp"
-        android:ems="10"
-        android:hint="bonus"
-        android:inputType="numberSigned" />
+    <!--<EditText-->
+        <!--android:id="@+id/bonusInput"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/rollInput"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="11dp"-->
+        <!--android:ems="10"-->
+        <!--android:hint="bonus"-->
+        <!--android:inputType="numberSigned" />-->
 
 
 </RelativeLayout>

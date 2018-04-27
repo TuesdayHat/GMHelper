@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @BindView(R.id.rollInput) EditText mRolls;
     @BindView(R.id.rollButton) Button mRollButton;
-    @BindView(R.id.bonusInput) EditText mBonus;
+//    @BindView(R.id.bonusInput) EditText mBonus;
     @BindView(R.id.diceSizeInput) EditText mSides;
     @BindView(R.id.rawResultView) TextView mRawResult;
     @BindView(R.id.totalResultView) TextView mTotalResult;
@@ -41,18 +41,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(mRolls.length() > 0 && mSides.length() > 0){
                 int rolls = Integer.parseInt(mRolls.getText().toString());
                 int sides = Integer.parseInt(mSides.getText().toString());
-                result = roller.dice(rolls, sides);
+                result = roller.unique(rolls, sides);
 
                 //display raw
                 mRawResult.setText("RAW: ");
                 for(int roll: result){
-                    mRawResult.append(roll+" ");
+                    mRawResult.append(roll+", ");
                 }
 
                 //display total
-                if (mBonus.length() > 0){
-                    bonus = Integer.parseInt(mBonus.getText().toString());
-                }
+//                if (mBonus.length() > 0){
+//                    bonus = Integer.parseInt(mBonus.getText().toString());
+//                }
 
                 mTotalResult.setText(String.format("Total: %s", roller.total(result, bonus)));
             }
