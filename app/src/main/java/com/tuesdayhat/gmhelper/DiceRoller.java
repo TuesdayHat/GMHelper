@@ -53,4 +53,29 @@ public class DiceRoller {
         return result;
     }
 
+    public int[] unique(int rolls, int size){
+        //rolls a number of unique results from a random table
+        int[] result = new int[rolls];
+        int[] table = buildTable(size);
+
+        for (int i = 0;i < result.length; i++) {
+            int roll = dice(1, table.length)[0];
+            result[i] = table[roll-1];
+
+            table[roll-1] = table[table.length-1];
+            table = Arrays.copyOf(table, table.length-1);
+        }
+
+        return result;
+    }
+
+    private int[] buildTable(int size){
+        //fills up an array with numbers up to the length
+        int[] result = new int[size];
+        for(int i = 1; i <= size; i++){
+            result[i-1] = i;
+        }
+        return result;
+    }
+
 }
