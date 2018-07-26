@@ -10,7 +10,8 @@ import static org.junit.Assert.*;
 public class RollParserTest extends RollParser {
     @Test
     public void rawOutput() throws Exception{
-        System.out.println(parse("10d6"));
+        //System.out.println(parse("10d6"));
+        System.out.println(showTest());
     }
 
 //    @Test

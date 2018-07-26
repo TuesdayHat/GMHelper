@@ -65,4 +65,10 @@ public class DiceRollerTest extends DiceRoller {
 
         assert(unique);
     }
+
+//    @Test
+//    public void rawOutput() throws Exception{
+//        //System.out.println(parse("10d6"));
+//        System.out.println(showTest());
+//    }
 }

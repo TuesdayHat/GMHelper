@@ -4,7 +4,15 @@ package com.tuesdayhat.gmhelper;
 import java.util.Arrays;
 import java.util.Random;
 
+import clojure.java.api.Clojure;
+import clojure.lang.IFn;
+import clojure.lang.RT;
+
 public class DiceRoller {
+
+//    public Object showTest (){
+//        return Clojure.read
+//    }
 
     //gives back an array of all natural results of dice rolls
     public int[] dice (int rolls, int sides){
